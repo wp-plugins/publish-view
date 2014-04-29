@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'dashicons';
+	src:url('fonts/dashicons.eot?-7z59z8');
+	src:url('fonts/dashicons.eot?#iefix-7z59z8') format('embedded-opentype'),
+		url('fonts/dashicons.woff?-7z59z8') format('woff'),
+		url('fonts/dashicons.ttf?-7z59z8') format('truetype'),
+		url('fonts/dashicons.svg?-7z59z8#dashicons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
