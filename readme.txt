@@ -15,10 +15,6 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 1. Upload the `publish-view` folder to the `/wp-content/plugins/` directory or upload the zip within WordPress
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-== Screenshots ==
-
-
-
 == Changelog ==
 
 = 1.3 =
