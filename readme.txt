@@ -4,7 +4,7 @@ Contributors:launchinteractive
 Tags: save, view, publish, update
 Requires at least: 3.6.1
 Stable tag: trunk
-Tested up to: 4.0
+Tested up to: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,3 +30,5 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 
 = 1.0 =
 * Initial Release.
+
+
