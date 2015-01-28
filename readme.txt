@@ -17,6 +17,9 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 
 == Changelog ==
 
+= 1.4 =
+* Only show publish & view button for public post types
+
 = 1.3 =
 * Prefix functions to avoid conflicts
 

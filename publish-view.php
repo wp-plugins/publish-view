@@ -3,7 +3,7 @@
  * Plugin Name: Publish & View
  * Plugin URI: http://launchinteractive.com.au/wordpress/publish-view.zip
  * Description: Adds a button so you can Publish and View Pages, Posts etc. in one step.
- * Version: 1.3
+ * Version: 1.4
  * Author: Marc Castles
  * Author URI: http://launchinteractive.com.au
  * License: GPL2
@@ -27,7 +27,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 function publish_view_enqueue() {
 	global $post;
-	if(isset($post) && $post->post_type != 'acf' && in_array($post->post_status,array('auto-draft','draft','publish'))) {
+	$type = get_post_type_object( $post->post_type );
+	if(isset($post) && $type->public && in_array($post->post_status,array('auto-draft','draft','publish'))) {
     	global $wp_version;
     	if($wp_version < 3.8) {
 	    	wp_register_style( 'publish-view-dashicons', plugins_url('publish-view-dashicons.css', __FILE__) );
@@ -44,8 +45,9 @@ add_action( 'admin_enqueue_scripts', 'publish_view_enqueue' );
 function publish_view_submitbox_start(){
 	global $post;
 	global $wp_version;
-	
-	if($post->post_type != 'acf') {
+
+	$type = get_post_type_object( $post->post_type );
+	if($type->public) {
 		
 		if($post->post_status == 'auto-draft' || $post->post_status == 'draft') {
 			submit_button('&#xf177;','primary','publish',false, array('onclick'=>"jQuery(this).after('<input type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Publish & View','id'=>'publishview'));
