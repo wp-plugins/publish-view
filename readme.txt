@@ -17,6 +17,10 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 
 == Changelog ==
 
+= 1.5 =
+* Added mobile support so button lines up correctly on small screens
+* Removed prefixed CSS styles as browser support is more than adequate
+
 = 1.4 =
 * Only show publish & view button for public post types
 
