@@ -3,7 +3,7 @@
  * Plugin Name: Publish & View
  * Plugin URI: http://launchinteractive.com.au/wordpress/publish-view.zip
  * Description: Adds a button so you can Publish and View Pages, Posts etc. in one step.
- * Version: 1.4
+ * Version: 1.5
  * Author: Marc Castles
  * Author URI: http://launchinteractive.com.au
  * License: GPL2
