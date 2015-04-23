@@ -3,7 +3,7 @@
  * Plugin Name: Publish & View
  * Plugin URI: https://wordpress.org/plugins/publish-view
  * Description: Adds a button so you can Publish and View Pages, Posts etc. in one step.
- * Version: 1.6
+ * Version: 1.7
  * Author: Marc Castles
  * Author URI: http://launchinteractive.com.au
  * License: GPL2
@@ -55,6 +55,8 @@ function publish_view_submitbox_start(){
 			submit_button('&#xf177;','primary','publish',false, array('onclick'=>"jQuery(this).after('<input type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Update & View','id'=>'publishview'));
 		}
 	}
+	//remove preview new tab/page
+	echo '<script>jQuery(\'#post-preview\').attr(\'target\',\'_self\');jQuery(\'#message.updated a\').removeAttr(\'target\');</script>';
 }
 add_action( 'post_submitbox_start', 'publish_view_submitbox_start' );
 

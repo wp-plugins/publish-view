@@ -17,6 +17,9 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 
 == Changelog ==
 
+= 1.67 =
+* Disable new tab/page for preview buttons in posts and pages
+
 = 1.6 =
 * Prevent warning on some pages
 
