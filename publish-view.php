@@ -4,7 +4,7 @@
  * Plugin URI: https://wordpress.org/plugins/publish-view
  * Description: Adds a button so you can Publish and View Pages, Posts etc. in one step.
  * Version: 1.7
- * Author: Marc Castles
+ * Author: Launch Interactive
  * Author URI: http://launchinteractive.com.au
  * License: GPL2
 */
