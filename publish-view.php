@@ -56,7 +56,7 @@ function publish_view_submitbox_start(){
 		}
 	}
 	//remove preview new tab/page
-	echo '<script>jQuery(\'#post-preview\').attr(\'target\',\'_self\');jQuery(\'#message.updated a\').removeAttr(\'target\');</script>';
+	echo '<script>jQuery(\'#post-preview\').attr(\'target\',\'_self\');jQuery(\'#message.updated a,#view-post-btn a\').removeAttr(\'target\');</script>';
 }
 add_action( 'post_submitbox_start', 'publish_view_submitbox_start' );
 
