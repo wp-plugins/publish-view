@@ -4,7 +4,7 @@ Contributors:launchinteractive
 Tags: save, view, publish, update
 Requires at least: 3.6.1
 Stable tag: trunk
-Tested up to: 4.2
+Tested up to: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
