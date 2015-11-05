@@ -16,6 +16,9 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+= 2.1 =
+* Add option per user to open new window for Publish View button
+
 = 2 =
 * Reformat plugin code
 * Make New Window optional per user and default to checked
