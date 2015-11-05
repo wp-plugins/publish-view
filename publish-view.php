@@ -3,7 +3,7 @@
  * Plugin Name: Publish & View
  * Plugin URI: https://wordpress.org/plugins/publish-view
  * Description: Adds a button so you can Publish and View Pages, Posts etc. in one step.
- * Version: 2.1
+ * Version: 2.2
  * Author: Launch Interactive
  * Author URI: http://launchinteractive.com.au
  * License: GPL2
@@ -97,7 +97,7 @@ class PublishView {
 			$options = array();
 			
 			if($post->post_status == 'auto-draft' || $post->post_status == 'draft') {
-				$options = array('onclick'=>"jQuery('#publishviewhidden').remove();jQuery(this).after('<input id=\"publishviewhidden\" type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Publish & View','id'=>'publishview');
+				$options = array('onclick'=>"if(jQuery('#publish').is(':disabled')){return false};jQuery('#publishviewhidden').remove();jQuery(this).after('<input id=\"publishviewhidden\" type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Publish & View','id'=>'publishview');
 			} else if($post->post_status == 'publish') {
 				$options = array('onclick'=>"jQuery('#publishviewhidden').remove();jQuery(this).after('<input id=\"publishviewhidden\" type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Update & View','id'=>'publishview');
 			}
@@ -108,7 +108,7 @@ class PublishView {
 			
 				if($publishNewWindow == 'enabled') {
 
-					$options['onclick'] .= ";jQuery(this).closest('form').attr('target','_blank');setTimeout(function(){jQuery('#submitpost .disabled').removeClass('disabled');jQuery('#submitpost .spinner').removeClass('is-active');wp.autosave.server.resume()},1000);";
+					$options['onclick'] .= ";jQuery(this).closest('form').attr('target','_blank');setTimeout(function(form){jQuery('#submitpost .disabled').removeClass('disabled');jQuery('#submitpost .spinner').removeClass('is-active');wp.autosave.server.resume();form.attr('target','');},1000,jQuery(this).closest('form'));";
 
 				}
 			
@@ -126,8 +126,6 @@ class PublishView {
 	public function redirect($location) {
     global $post;
     if (isset($_POST['publishview'])) {
-
-
 			$location = get_permalink($post->ID);
     }
     return $location;

@@ -16,6 +16,9 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+= 2.2 =
+* Check if publish button is disabled. If so don't submit (fix for Require Featured Image plugin)
+
 = 2.1 =
 * Add option per user to open new window for Publish View button
 
