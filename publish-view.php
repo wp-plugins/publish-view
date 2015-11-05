@@ -97,9 +97,9 @@ class PublishView {
 			$options = array();
 			
 			if($post->post_status == 'auto-draft' || $post->post_status == 'draft') {
-				$options = array('onclick'=>"jQuery(this).after('<input type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Publish & View','id'=>'publishview');
+				$options = array('onclick'=>"jQuery('#publishviewhidden').remove();jQuery(this).after('<input id=\"publishviewhidden\" type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Publish & View','id'=>'publishview');
 			} else if($post->post_status == 'publish') {
-				$options = array('onclick'=>"jQuery(this).after('<input type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Update & View','id'=>'publishview');
+				$options = array('onclick'=>"jQuery('#publishviewhidden').remove();jQuery(this).after('<input id=\"publishviewhidden\" type=\"hidden\" name=\"publishview\" value=\"Y\" />')",'title'=>'Update & View','id'=>'publishview');
 			}
 			
 			if(count($options) > 0) {
