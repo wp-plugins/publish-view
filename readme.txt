@@ -16,6 +16,9 @@ Adds a button so you can Publish and View Pages, Posts etc. in one step.
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Changelog ==
+= 2.2.1 =
+* Fix layout when Yoast 3.0 is installed
+
 = 2.2 =
 * Check if publish button is disabled. If so don't submit (fix for Require Featured Image plugin)
 
